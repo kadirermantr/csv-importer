@@ -1,0 +1,22 @@
+{
+  "name": "kadirermantr/mivento-assessment",
+  "type": "project",
+  "license": "MIT",
+  "homepage": "https://github.com/kadirermantr/mivento-assessment",
+  "description": "This project was developed for Mivento",
+  "keywords": ["backend", "php"],
+  "authors": [
+    {
+      "name": "kadirerman.com",
+      "email": "kadirermantr@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\" : "src/"
+    }
+  }
+}
