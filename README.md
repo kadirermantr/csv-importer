@@ -9,5 +9,5 @@
 
 ## Install
 
-1. Import sql file to database
+1. Import SQL file to database
 2. `composer install`
