@@ -47,17 +47,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                 'point' => $item->point,
             ]);
         }
+
+        $database->insert('INSERT INTO campaigns(name, created_at) VALUES(:name, :created_at)', [
+            'name' => $_POST['campaign-name'],
+            'created_at' => $_POST['campaign-date'],
+        ]);
+
+        $message = urlencode("Veriler içe aktarıldı.");
+        header('Location: index.php?message=' . $message);
     } catch (Exception $exception) {
         $message = urlencode("Hata: " . $exception->getMessage());
         header('Location: index.php?message=' . $message);
         exit();
     }
-
-    $database->insert('INSERT INTO campaigns(name, created_at) VALUES(:name, :created_at)', [
-        'name' => $_POST['campaign-name'],
-        'created_at' => $_POST['campaign-date'],
-    ]);
-
-    $message = urlencode("Veriler içe aktarıldı.");
-    header('Location: index.php?message=' . $message);
 }
