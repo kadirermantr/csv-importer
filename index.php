@@ -1,75 +1,59 @@
 <!doctype html>
 <html lang="tr">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
-    <title>Mivento Assessment</title>
-
-    <style>
-        .container {
-            margin-top: 2rem !important;
-        }
-    </style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSV Importer</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-5">
-            <?php if (isset($_GET['message'])) { ?>
-                <div class="alert alert-secondary"><?= $_GET['message'] ?></div>
-            <?php } ?>
+	<div class="container">
+		<div class="d-flex justify-content-center">
+			<div class="card w-50 mt-5">
+				<div class="card-header">
+					<h3 class="text-center">CSV Importer</h3>
+				</div>
 
-            <form action="upload.php" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
-                <div class="mb-3">
-                    <label for="campaign-name" class="form-label">Kampanya Adı</label>
-                    <input type="text" class="form-control" name="campaign-name" id="campaign-name" required />
-                </div>
-                <div class="mb-3">
-                    <select class="form-select" name="campaign-date" required>
-                        <option selected disabled value="">Tarih Seçin</option>
-                        <option value="2022-07">Temmuz 2022</option>
-                        <option value="2022-08">Ağustos 2022</option>
-                        <option value="2022-09">Eylül 2022</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="campaign-file" class="form-label">Dosya Yükleyin</label>
-                    <input class="form-control" type="file" accept=".csv" name="file" id="campaign-file" required />
-                </div>
-                <button class="btn btn-primary btn-block" type="submit">Yükle</button>
-        </div>
-        </form>
-    </div>
-</div>
-</div>
+				<div class="card-body">
+					<?php if (isset($_GET['message'])) { ?>
+						<div id="alert" class="alert alert-secondary">
+							<?= $_GET['message'] ?>
+						</div>
+					<?php } ?>
 
-<!-- Option 2: Separate Popper and Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+					<form action="upload.php" method="POST" enctype="multipart/form-data">
+						<div class="mb-3">
+							<input type="text" class="form-control" name="campaign-name" id="campaign-name" placeholder="Kampanya adı" required />
+						</div>
+						<div class="mb-3">
+							<select class="form-select" name="campaign-date" required>
+								<option selected disabled value="">Tarih Seçin</option>
+								<option value="2022-07">Temmuz 2022</option>
+								<option value="2022-08">Ağustos 2022</option>
+								<option value="2022-09">Eylül 2022</option>
+							</select>
+						</div>
 
-<!-- Example starter JavaScript for disabling form submissions if there are invalid fields -->
-<script>
-    (function () {
-        'use strict';
+						<div class="mb-3">
+							<input class="form-control" type="file" accept=".csv" name="file" id="campaign-file" required />
+						</div>
 
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.querySelectorAll('.needs-validation');
+						<div class="mb-3">
+							<button type="submit" class="btn btn-success w-100">Ekle</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 
-        // Loop over them and prevent submission
-        Array.prototype.slice.call(forms)
-            .forEach(function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (!form.checkValidity()) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 
-                    form.classList.add('was-validated');
-                }, false);
-            });
-    })();
-</script>
+	<script type="text/javascript">
+		setTimeout(function () {
+			$('#alert').alert('close');
+		}, 5000);
+	</script>
 </body>
 </html>
