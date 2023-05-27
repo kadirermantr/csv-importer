@@ -1,0 +1,70 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "9d3648940dd921f340e83e952ab8c8c1",
+    "packages": [
+        {
+            "name": "fusonic/csv-reader",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fusonic/php-csv-reader.git",
+                "reference": "64d3410d19180aeb481a87b9bcdba1266260b4cd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fusonic/php-csv-reader/zipball/64d3410d19180aeb481a87b9bcdba1266260b4cd",
+                "reference": "64d3410d19180aeb481a87b9bcdba1266260b4cd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.18",
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "^9.5"
+            },
+            "suggest": {
+                "ext-intl": "Required to use IntlValueConverter for advanced value conversion."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Fusonic\\CsvReader\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fusonic GmbH",
+                    "email": "office@fusonic.net"
+                }
+            ],
+            "description": "Map data from CSV files to typed PHP models.",
+            "support": {
+                "issues": "https://github.com/fusonic/php-csv-reader/issues",
+                "source": "https://github.com/fusonic/php-csv-reader/tree/0.2.0"
+            },
+            "time": "2021-03-17T13:09:42+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^8.1",
+        "ext-pdo": "*"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}
