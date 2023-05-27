@@ -5,46 +5,34 @@ require "Database.php";
 
 use Fusonic\CsvReader\Attributes\TitleMapping;
 use Fusonic\CsvReader\CsvReader;
-use Fusonic\CsvReader\CsvReaderOptions;
 
 class Entity
 {
-    #[TitleMapping('employee_id')]
-    public string $employee_id;
+    #[TitleMapping('firstname')]
+    public string $firstname;
 
-    #[TitleMapping('name')]
-    public string $name;
-
-    #[TitleMapping('surname')]
-    public string $surname;
+    #[TitleMapping('lastname')]
+    public string $lastname;
 
     #[TitleMapping('email')]
     public string $email;
 
     #[TitleMapping('phone')]
     public string $phone;
-
-    #[TitleMapping('point')]
-    public string $point;
 }
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
     $database = new Database();
-
-    $options = new CsvReaderOptions();
-    $options->delimiter = ';';
-    $reader = new CsvReader($_FILES['file']['tmp_name'], $options);
+    $reader = new CsvReader($_FILES['file']['tmp_name']);
 
     try {
         foreach ($reader->readObjects(Entity::class) as $item) {
-            $database->insert('INSERT INTO employees VALUES(:employee_id, :name, :surname, :email, :phone, :point)', [
-                'employee_id' => $item->employee_id,
-                'name' => $item->name,
-                'surname' => $item->surname,
+            $database->insert('INSERT INTO employees (firstname, lastname, email, phone) VALUES(:firstname, :lastname, :email, :phone)', [
+                'firstname' => $item->firstname,
+                'lastname' => $item->lastname,
                 'email' => $item->email,
                 'phone' => $item->phone,
-                'point' => $item->point,
             ]);
         }
 

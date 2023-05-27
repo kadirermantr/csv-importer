@@ -1,10 +1,10 @@
 -- -------------------------------------------------------------
--- TablePlus 5.0.0(454)
+-- TablePlus 5.3.6(496)
 --
 -- https://tableplus.com/
 --
 -- Database: test
--- Generation Time: 2022-10-10 13:45:00.7970
+-- Generation Time: 2023-05-28 01:47:43.2240
 -- -------------------------------------------------------------
 
 
@@ -19,19 +19,19 @@
 
 
 CREATE TABLE `campaigns` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `created_at` varchar(50) NOT NULL,
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `created_at` date NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `employees` (
-  `employee_id` bigint DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `surname` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `phone` varchar(30) DEFAULT NULL,
-  `point` int DEFAULT NULL
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(255) NOT NULL,
+  `lastname` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
