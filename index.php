@@ -15,12 +15,6 @@
 				</div>
 
 				<div class="card-body">
-					<?php if (isset($_GET['message'])) { ?>
-						<div id="alert" class="alert alert-secondary">
-							<?= $_GET['message'] ?>
-						</div>
-					<?php } ?>
-
 					<form action="upload.php" method="POST" enctype="multipart/form-data">
 						<div class="mb-3">
 							<input type="text" class="form-control" name="campaign-name" id="campaign-name" placeholder="Campaign name" required />
@@ -42,6 +36,12 @@
 							<button type="submit" class="btn btn-success w-100">Add</button>
 						</div>
 					</form>
+
+					<?php if (isset($_GET['message'])) { ?>
+						<div id="alert" class="alert alert-secondary">
+							<?= $_GET['message'] ?>
+						</div>
+					<?php } ?>
 				</div>
 			</div>
 		</div>
