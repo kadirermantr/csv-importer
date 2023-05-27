@@ -1,10 +1,6 @@
-# Mivento Assesment
+# CSV Importer
 
-**Assesment link:** [mivento/assessment-php](https://github.com/mivento/assessment-php)
-
-## Technologies
-
-- **Programming language:** PHP
+- **Programming Language:** PHP
 - **Package:** [CSV Reader](https://github.com/fusonic/php-csv-reader)
 
 ## Install
