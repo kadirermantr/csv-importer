@@ -4,7 +4,7 @@ class Database
 {
     protected PDO $pdo;
 
-    public function __construct($host = 'localhost', $user = 'root', $pass = null, $database = 'mivento')
+    public function __construct($host = 'localhost', $user = 'root', $pass = null, $database = 'test')
     {
         $this->pdo = new PDO("mysql:host=$host; dbname=$database;", $user, $pass);
     }

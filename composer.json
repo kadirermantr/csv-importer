@@ -1,9 +1,9 @@
 {
-  "name": "kadirermantr/mivento-assessment",
+  "name": "kadirermantr/csv-importer",
   "type": "project",
   "license": "MIT",
-  "homepage": "https://github.com/kadirermantr/mivento-assessment",
-  "description": "This project was developed for Mivento",
+  "homepage": "https://github.com/kadirermantr/csv-importer",
+  "description": "CSV Importer for PHP",
   "keywords": ["backend", "php"],
   "authors": [
     {

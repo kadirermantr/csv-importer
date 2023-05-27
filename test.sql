@@ -3,7 +3,7 @@
 --
 -- https://tableplus.com/
 --
--- Database: mivento
+-- Database: test
 -- Generation Time: 2022-10-10 13:45:00.7970
 -- -------------------------------------------------------------
 

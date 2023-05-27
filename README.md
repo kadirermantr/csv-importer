@@ -5,5 +5,6 @@
 
 ## Install
 
-1. Import SQL file to database
-2. `composer install`
+1. Create database named `test`
+2. Import SQL file `test.sql`
+3. `composer install`
