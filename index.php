@@ -22,9 +22,9 @@
 						<div class="mb-3">
 							<select class="form-select" name="campaign-date" required>
 								<option selected disabled value="">Select date</option>
-								<option value="2022-07">June 2022</option>
-								<option value="2022-08">August 2022</option>
-								<option value="2022-09">September 2022</option>
+								<option value="2023-01">January 2023</option>
+								<option value="2023-02">February 2023</option>
+								<option value="2023-03">March 2023</option>
 							</select>
 						</div>
 
