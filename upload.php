@@ -53,10 +53,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             'created_at' => $_POST['campaign-date'],
         ]);
 
-        $message = urlencode("Veriler içe aktarıldı.");
+        $message = urlencode('Data has been imported successfully.');
         header('Location: index.php?message=' . $message);
     } catch (Exception $exception) {
-        $message = urlencode("Hata: " . $exception->getMessage());
+        $message = urlencode("Error: " . $exception->getMessage());
         header('Location: index.php?message=' . $message);
         exit();
     }

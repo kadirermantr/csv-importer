@@ -23,14 +23,14 @@
 
 					<form action="upload.php" method="POST" enctype="multipart/form-data">
 						<div class="mb-3">
-							<input type="text" class="form-control" name="campaign-name" id="campaign-name" placeholder="Kampanya adı" required />
+							<input type="text" class="form-control" name="campaign-name" id="campaign-name" placeholder="Campaign name" required />
 						</div>
 						<div class="mb-3">
 							<select class="form-select" name="campaign-date" required>
-								<option selected disabled value="">Tarih Seçin</option>
-								<option value="2022-07">Temmuz 2022</option>
-								<option value="2022-08">Ağustos 2022</option>
-								<option value="2022-09">Eylül 2022</option>
+								<option selected disabled value="">Select date</option>
+								<option value="2022-07">June 2022</option>
+								<option value="2022-08">August 2022</option>
+								<option value="2022-09">September 2022</option>
 							</select>
 						</div>
 
@@ -39,7 +39,7 @@
 						</div>
 
 						<div class="mb-3">
-							<button type="submit" class="btn btn-success w-100">Ekle</button>
+							<button type="submit" class="btn btn-success w-100">Add</button>
 						</div>
 					</form>
 				</div>
