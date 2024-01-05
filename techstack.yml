@@ -2,7 +2,7 @@ repo_name: kadirermantr/csv-importer
 report_id: 4cfd43abdae014cbbee1834429ef880a
 version: 0.1
 repo_type: Public
-timestamp: '2023-12-17T20:12:43+00:00'
+timestamp: '2024-01-05T08:21:07+00:00'
 requested_by: kadirermantr
 provider: github
 branch: main
@@ -17,6 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/991/hwUcGZ41_400x400.jpg
+  detection_source_url: https://github.com/kadirermantr/csv-importer
   detection_source: Repo Metadata
 - name: SQL
   description: It is a domain-specific language used in programming
@@ -26,6 +27,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/2271/default_068d33483bba6b81ee13fbd4dc7aab9780896a54.png
+  detection_source_url: https://github.com/kadirermantr/csv-importer/blob/main/test.sql
   detection_source: test.sql
   last_updated_by: kadirermantr
   last_updated_on: 2022-10-10 10:45:34.000000000 Z
@@ -37,4 +39,5 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/kadirermantr/csv-importer
   detection_source: Repo Metadata
