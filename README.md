@@ -1,5 +1,6 @@
 # CSV Importer
 
+- **Tech Stack:** [Tech Stack File](https://github.com/kadirermantr/csv-importer/blob/main/techstack.md)
 - **Programming Language:** PHP
 - **Package:** [CSV Reader](https://github.com/fusonic/php-csv-reader)
 - **Database Diagram:** [Diagram](https://dbdiagram.io/d/64715ca27764f72fcfee9ee2)
